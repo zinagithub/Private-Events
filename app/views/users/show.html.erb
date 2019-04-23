@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
+<h3>Attended events:</h3>
+<ul>
 <% @events.each do |ev|  %>
-<p>Title :<%= ev.title %></p>
-
+	<li><%= ev.title %></li>
 <% end%>
+</ul>
 
 
 
