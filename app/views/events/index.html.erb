@@ -1,5 +1,11 @@
-<% @events.each do |ev|  %>
-	<p>Title :<%= ev.title %></p>
-	<p>Content :<%= ev.content %></p>
-	<p>Date :<%= ev.date %></p>
-<% end%>
+<% if logged_in? %>
+	<%= link_to 'New event', new_event_path %>
+<% end %>
+<div>
+	<h3>Past Events:</h3>
+	<%= render partial: 'event', collection: @past_events %>
+</div>
+<div>
+	<h3>Upcoming Events:</h3>
+	<%= render partial: 'event', collection: @upcoming_events %>
+</div>
