@@ -1,6 +1,3 @@
-<% if logged_in? %>
-	<%= link_to 'New event', new_event_path %>
-<% end %>
 <div>
 	<h3>Past Events:</h3>
 	<%= render partial: 'event', collection: @past_events %>

@@ -2,8 +2,4 @@
 <p>Host: <%= @event.creator.name %> </p>\
 <hr>
 <h3>Attendees:</h3>
-<% unless @event.attendees.nil? %>
-	<% @event.attendees.each do |attendee| %> 
-		<p><%= attendee.name %></p>
-	<% end %>
-<% end %>
+<%= render partial: 'attendee', collection: @event.attendees %>
