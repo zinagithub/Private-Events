@@ -1,5 +1,5 @@
 <div>
-	<p>Title :<%= event.title %></p>
+	<p>Title :<%= link_to event.title, event %></p>
 	<p>Content :<%= event.content %></p>
 	<p>Date :<%= event.date %></p>
 	<button><%= link_to 'Join Event', join_path(event) %></button>

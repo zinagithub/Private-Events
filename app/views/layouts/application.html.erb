@@ -10,14 +10,7 @@
   </head>
 
   <body>
-    <% if logged_in? %>
-      <h1><%= link_to current_user.name, current_user%></h1>
-      <%= link_to 'Logout', logout_path %>
-      <%= link_to 'Events', events_path %>
-      <% else %>
-      <%= link_to 'Register', signup_path %>
-      <%= link_to 'Login', login_path %>
-    <% end %>
+    <%= navbar_helper %>
     <%= yield %>
   </body>
 </html>
