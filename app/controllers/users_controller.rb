@@ -10,9 +10,9 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @past_events = @user.events_as_attendee.past
+    @past_events = @user.past_events
     @created_events = @user.events
-    @upcoming_events = @user.events_as_attendee.upcoming
+    @upcoming_events = @user.upcoming_events
   end
 
   # GET /users/new

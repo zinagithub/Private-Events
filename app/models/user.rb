@@ -3,4 +3,12 @@ class User < ApplicationRecord
 	validates_presence_of :name
 	has_many :attendances
 	has_many :events_as_attendee, through: :attendances, source: 'event'
+
+def past_events
+	events_as_attendee.past
+end	
+def upcoming_events
+	events_as_attendee.upcoming
+end	
+
 end
